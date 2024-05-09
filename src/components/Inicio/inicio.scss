@@ -1,0 +1,47 @@
+@import "../../style.scss";
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+//   
+@include themify($themes) {
+    background-color: themed("bg");
+
+    h1{
+        color: themed("textColor");
+        font-size: 4rem;
+    }
+    
+    h2, h3, h4{
+        color: themed("textColor");
+        font-size:2rem;
+    }
+
+    h1, h2, h3, h4{
+        animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
+    }
+
+       
+    img{
+        width: 100px;
+        height: 100px;
+        border: 0px solid;
+        border-radius: 102px;
+    }
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+

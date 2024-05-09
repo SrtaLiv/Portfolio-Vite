@@ -1,0 +1,126 @@
+//  LIGHT AND DARK MODE 
+$themes: (
+  light: (
+    textColor: #353534,
+    bg: #f6f5f1,
+    bg2: #c9d596,
+    logo: darkblue,
+    bgSoft: #f6f3f3,
+    textColorSoft: #555,
+    border: lightgray,
+    primary : #7fab93
+  ),
+  dark: (
+    textColor: whitesmoke,
+    bg: #222,
+    bg2: #729808,
+    logo: white,
+    bgSoft: #333,
+    textColorSoft: lightgray,
+    border: #444,
+    primary : #52ad7b
+  ),
+);
+
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+//ESTILOS GENERALES
+
+*{
+  font-family: Playfair Display;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  overflow: scroll;
+  scrollbar-color: rgb(0, 0, 0) rgb(55, 55, 55);
+  scrollbar-width: 29px;
+  overflow-x: hidden;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+span{
+  font-weight: bold;
+  color: #417e5c;
+}
+
+//COLORES
+
+
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+
+  --h1-font-size: 3.5rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 1.5rem;
+
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  // Responsive typography
+  @media screen and (min-width: 968px){
+      --h1-font-size: 2.25rem;
+      --normal-font-size: 1rem;
+  }
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}

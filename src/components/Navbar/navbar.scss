@@ -1,0 +1,114 @@
+@import "../../style.scss";
+
+header{
+  @include themify($themes) {
+  background-color: themed("bg");
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  margin-left: 40px;
+    .nav{
+      height: var(--header-height);
+      color: themed("textColor");
+      background-color: themed("bg");
+      align-items: center;
+      justify-content: space-between;
+      vertical-align: baseline; 
+      display: flex;
+      font-size: .8rem;
+      
+      .nav-logo{
+        color: themed("textColor");
+        font-weight: 600;
+        margin: 0; 
+        font-size: var(--h1-font-size);
+      }
+      
+      .nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600; 
+        justify-content: space-around;
+        
+        
+        @include mobile{
+          background-color: themed("bg");
+          border-top: 2px solid themed("textColor");
+          bottom: 0;
+          left: 0;
+          position: fixed;
+          width: 100%;
+          height: 4rem;
+          display: grid;
+          align-content: center;
+          transition: .4s;
+          position: fixed;
+        }
+        
+        .nav-list {
+          list-style: none;
+          display: flex;
+          gap: 20px;
+          @include mobile{
+            margin-bottom: 20px;
+          }
+          .nav-item {
+            padding: 1.1rem 0 .8rem 0;
+           
+            .nav-icon{
+              display: none;
+              @include mobile{
+                display: flex;
+                
+              }
+            }
+            .nav-link {
+              text-decoration: none;
+              position: relative;
+              margin-top: 1rem;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              color: themed("textColor");
+            }
+            .nav-link:hover{
+              border-bottom: 1px;
+              color: themed("primary");
+            }
+            
+        }
+   
+      }
+    }
+  }
+  }
+  
+}
+
+
+.cssanimation, .cssanimation span {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.rotateXIn { animation-name: rotateXIn }
+@keyframes rotateXIn {
+  0% {
+      transform: translate(-40px, 0px);
+      opacity: 0;
+  }
+  50% { transform: translate(40px, 0px) }
+}
+
+.rotateXIn:hover {
+  animation-name: rotateXIn;
+}
