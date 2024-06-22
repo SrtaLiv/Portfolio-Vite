@@ -5,7 +5,7 @@ import proyectosData from './ProyectosData';
 function Proyectos({ proyectos }) {
     return (
         <div className='proyectos-container'>
-            <h3>Proyectos Terminados</h3>
+            <h1>Mis proyectos</h1>
             <div className='proyectos'>
                 {proyectosData.map(proyecto => (
                     <Proyecto

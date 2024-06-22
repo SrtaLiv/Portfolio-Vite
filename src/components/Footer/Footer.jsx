@@ -10,35 +10,25 @@ function Footer() {
     }
     return (
         <footer>
-            <div className='contenedor-footer'>
-                <h1>Contactame</h1>
+                <div className='contenedor-footer'>
+                    <div className='icons-footer'>
+                        <a href={redes.x} className='delay' target="_blank">
+                            <FontAwesomeIcon icon="fa-brands fa-x-twitter" size='2x' />
+                        </a>
 
-        
-                <a className='btn-cv' href='#'>Download CV
-                    <FontAwesomeIcon icon="fa-solid fa-circle-arrow-down" />
-                </a>
-                <a className='btn-cv' href='#'>Copy email
-                <FontAwesomeIcon icon="fa-solid fa-copy" />
-                </a>
+                        <a href={redes.instagram} target="_blank">
+                            <FontAwesomeIcon icon="fa-brands fa-instagram" size='2x' />
+                        </a>
 
-                <div className='icons-footer'>
-                    <a href={redes.x} className='delay' target="_blank">
-                        <FontAwesomeIcon icon="fa-brands fa-x-twitter" size='2x' />
-                    </a>
+                        <a href={redes.linkedin} className='delay' target="_blank">
+                            <FontAwesomeIcon icon="fa-brands fa-linkedin-in" size='2x' />
+                        </a>
 
-                    <a href={redes.instagram} target="_blank">
-                        <FontAwesomeIcon icon="fa-brands fa-instagram" size='2x' />
-                    </a>
-
-                    <a href={redes.linkedin} className='delay' target="_blank">
-                        <FontAwesomeIcon icon="fa-brands fa-linkedin-in" size='2x' />
-                    </a>
-
-                    <a href={redes.github} target="_blank">
-                        <FontAwesomeIcon icon="fa-brands fa-github" size='2x' />
-                    </a>
+                        <a href={redes.github} target="_blank">
+                            <FontAwesomeIcon icon="fa-brands fa-github" size='2x' />
+                        </a>
+                    </div>
                 </div>
-            </div>
         </footer >
     )
 }

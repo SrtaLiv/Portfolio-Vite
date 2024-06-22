@@ -12,7 +12,7 @@ function Nav() {
     const toggleSwitch = () => setIsOn(!isOn);
     return (
         <header>
-            <nav className='nav container'>
+            <nav className='nav'>
                 <h1 className="cssanimation sequence rotateXIn">Liv</h1>
                 
                 <div className='nav-menu'>
@@ -33,18 +33,11 @@ function Nav() {
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='tecnologias-container'>
-                                    <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
-                                    Sobre mi
-                            </Link>
-                        </li>
-
-                        {/* <li className='nav-item'>
-                            <Link className='nav-link' to='tecnologias-container'>
+                            <Link className='nav-link' to='contacto-container'>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
                                     Contacto
                             </Link>
-                        </li> */}
+                        </li>
 
                     </ul>
                 </div>

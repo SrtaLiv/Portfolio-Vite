@@ -10,6 +10,8 @@ header{
   right: 0;
   z-index: 3;
   margin-left: 40px;
+  position: fixed;
+
     .nav{
       height: var(--header-height);
       color: themed("textColor");
@@ -19,6 +21,8 @@ header{
       vertical-align: baseline; 
       display: flex;
       font-size: .8rem;
+        width: 100%;
+
       
       .nav-logo{
         color: themed("textColor");

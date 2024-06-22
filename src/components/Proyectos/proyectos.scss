@@ -1,5 +1,3 @@
-// Estilos para el componente Proyectos
-
 @import "../../style.scss";
 
 
@@ -7,13 +5,16 @@
   @include themify($themes) {
     height: 100vh;
     background-color: themed("primary");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-
 
 .proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 50%;
     gap: 20px;
 
 }

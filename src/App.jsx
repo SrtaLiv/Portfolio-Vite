@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import Contact from "./components/Contact/Contact.jsx";
 
 
 function App() {
@@ -21,17 +22,24 @@ function App() {
       <section id="inicio">
         <Inicio />
       </section>
-      
+
       <section id="proyecto">
-      <Proyectos />
+        <Proyectos />
       </section>
 
 
       <section id="tecnologias-container">
-      <Tecnologias />
+        <Tecnologias />
       </section>
 
-      <Footer/>
+      <section id="contacto-container">
+        <Contact />
+      </section>
+
+      <section id="footer-container">
+        <Footer />
+      </section>
+
     </div>
   );
 }
