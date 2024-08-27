@@ -13,27 +13,29 @@ function Nav() {
     return (
         <header>
             <nav className='nav'>
+            <Link className='nav-link' to="inicio" smooth={true} duration={600}>
                 <h1 className="cssanimation sequence rotateXIn">Liv</h1>
+            </Link>
                 
                 <div className='nav-menu'>
                     <ul className='nav-list'>
                         
                         <li className='nav-item'>
-                            <Link className='nav-link' to="inicio" smooth={true} duration={500}>
+                            <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-house" />
-                                    Inicio
+                                    Sobre Mi
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='proyecto'smooth={true} duration={500}>
+                            <Link className='nav-link' to='proyecto'smooth={true} duration={600}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-diagram-project" />
                                     Proyectos
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='contacto-container' smooth={true} duration={500}>
+                            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
                                     Contacto
                             </Link>

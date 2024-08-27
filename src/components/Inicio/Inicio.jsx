@@ -1,29 +1,20 @@
 import { useEffect, useState } from 'react';
 import './inicio.scss';
+import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Inicio() {
     return (
         <div className='inicio'>
-            <p>👋</p>
-            <h4>Hola, Soy Olivia</h4>
-
-            <img alt="Foto perfil" draggable="true" src="https://pbs.twimg.com/profile_images/1802921319207407616/9X6R2I2f_400x400.jpg" />
-            <h3>Desarrolladora de <span>Software</span></h3>
-
-            <div className='descripcion'>
-                <p>Desde chica me apasiona la <span>tecnologia</span>.
-                    <br></br>
-                    <br></br>
-                    Empecé en el mundo de la programacion en el 2021 con cursos de Desarrollo Web.
-                    Aprendi de forma autodidacta hasta que en 2023 empece una Tecnicatura Universitaria en Desarrollo de Aplicaciones Informaticas para continuar mi formación.
-                    Me considero una persona que no se conforma fácil y que da lo mejor de si. 
-                    <br></br>
-                    <br></br>
-                    Además de estudiar creo contenido en <span>redes sociales</span> donde recomiendo recursos para programadores. 
-                    Busco desarrollar interfaces creativas y faciles de usar. 
-                    Muchas gracias por pasarte por aquí.
-                </p>
-            </div>
+            <h4>Hola, mi nombre es</h4>
+            <h1>Olivia.</h1>
+            <p>Me gusta desarrollar interfaces creativas y faciles de usar.</p>
+            <p>Actualmente estudio una Tecnicatura en Desarrollo de Aplicaciones. Tambien me encuentro haciendo proyectos para ganar experiencia y subo recursos para desarrolladores en mis redes</p>
+            <button>DOWNLOAD CV</button>
+            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
+                <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
+                CONTACTO
+            </Link>
         </div>
     )
 }

@@ -2,16 +2,20 @@
 
 form {
     @include themify($themes) {
-        background-color: pink;
         height: 85vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: themed("bg");
         color: themed("textColor");
+        
+        input{
+            height: 34px;
+        }
 
         .container-contact {
-            background-color: themed("bg");
+            background-color: rgba(243, 243, 243, 0.091);
             display: flex;
             flex-direction: column;
             height: 50vh;
@@ -19,7 +23,8 @@ form {
         }
 
         .message {
-            height: 4rem; /* Ajusta la altura del input */
+            height: 6rem; /* Ajusta la altura del input */
+            padding-top: 10px;
             box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto totales */
         }
     }

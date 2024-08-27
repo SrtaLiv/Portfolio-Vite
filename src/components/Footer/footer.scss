@@ -28,9 +28,10 @@ footer{
                 display: flex;
                 justify-content: space-around;
                 animation: mover 3s linear infinite alternate;
+                color: rgb(146, 97, 105);
             }
             a:hover{
-                color: themed("textColorSoft");
+                color: white;
             }
             // .delay{
             //     animation-delay: 1s;
