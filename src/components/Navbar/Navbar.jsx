@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { DarkModeContext } from "../../context/darkModeContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-scroll';
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import "./navbar.scss";
 
@@ -26,14 +26,14 @@ function Nav() {
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='proyecto'>
+                            <Link className='nav-link' to='proyecto'smooth={true} duration={500}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-diagram-project" />
                                     Proyectos
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='contacto-container'>
+                            <Link className='nav-link' to='contacto-container' smooth={true} duration={500}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
                                     Contacto
                             </Link>

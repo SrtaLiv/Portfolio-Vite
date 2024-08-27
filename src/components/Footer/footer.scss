@@ -2,24 +2,23 @@
 
 footer{
     @include themify($themes) {
-    height: 100vh;    
     position: static;
     bottom: 0;
-    background-color: pink;
+    background-color: themed("secondary");
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 15vh;
 
     .contenedor-footer{
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         border-radius: 20px;
         height: 50vh;
         width: 50%;
-        align-items: center;
         
         .icons-footer{
             display: flex;
@@ -31,7 +30,7 @@ footer{
                 animation: mover 3s linear infinite alternate;
             }
             a:hover{
-                color: themed("bg");
+                color: themed("textColorSoft");
             }
             // .delay{
             //     animation-delay: 1s;

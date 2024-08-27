@@ -4,7 +4,7 @@
   font-style: normal;
 }
 
-//  LIGHT AND DARK MODE 
+//  LIGHT AND DARK MODE
 $themes: (
   light: (
     textColor: #353534,
@@ -14,7 +14,9 @@ $themes: (
     bgSoft: #f6f3f3,
     textColorSoft: #555,
     border: lightgray,
-    primary : #7fab93
+    primary: #7fab93,
+    secondary: #ffc0cb
+
   ),
   dark: (
     textColor: whitesmoke,
@@ -24,10 +26,10 @@ $themes: (
     bgSoft: #333,
     textColorSoft: lightgray,
     border: #444,
-    primary : #52ad7b
-  ),
+    primary: #52ad7b,
+    secondary: #ffc0cb
+  )
 );
-
 
 @mixin themify($themes) {
   @each $theme, $map in $themes {
@@ -38,7 +40,7 @@ $themes: (
         $theme-map: map-merge(
           $theme-map,
           (
-            $key: $value,
+            $key: $value
           )
         ) !global;
       }
@@ -65,38 +67,35 @@ $themes: (
 
 //ESTILOS GENERALES
 
-*{
-  font-family: 'Poppins', sans-serfif;
+* {
+  font-family: "Poppins", sans-serfif;
   padding: 0;
   margin: 0;
 }
 
-html{
+html {
   overflow: scroll;
   scrollbar-color: rgb(0, 0, 0) rgb(55, 55, 55);
   scrollbar-width: 29px;
   overflow-x: hidden;
 }
 
-ul{
+ul {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   cursor: pointer;
 }
-span{
+span {
   font-weight: bold;
   color: #417e5c;
 }
 
 //COLORES
 
-
-
-
 /*=============== VARIABLES CSS ===============*/
-:root{
+:root {
   --header-height: 3rem;
 
   /*========== Colors ==========*/
@@ -108,25 +107,28 @@ span{
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 8%, 35%);
   --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #FFF;
+  --container-color: #fff;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Open Sans', sans-serif;
+  --body-font: "Open Sans", sans-serif;
 
   --h1-font-size: 3.5rem;
   --h2-font-size: 2.5rem;
   --h3-font-size: 1.5rem;
 
-  --normal-font-size: .938rem;
-  --tiny-font-size: .625rem;
-
-  // Responsive typography
-  @media screen and (min-width: 968px){
-      --h1-font-size: 2.25rem;
-      --normal-font-size: 1rem;
-  }
+  --normal-font-size: 0.938rem;
+  --tiny-font-size: 0.625rem;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+
+  @media screen and (min-width: 968px) {
+    :root {
+      --h1-font-size: 2.25rem;
+      --normal-font-size: 1rem;
+    }
+  }
+
+  
 }

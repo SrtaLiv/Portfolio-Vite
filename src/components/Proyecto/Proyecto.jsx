@@ -1,4 +1,4 @@
-import './proyecto.scss';
+// import './proyecto.scss';
 
 const Proyecto = ({ titulo, descripcion, tecnologias, imagenUrl, enlace }) => {
     return (

@@ -1,40 +1,26 @@
 @import "../../style.scss";
 
-form{
-    @include themify($themes) {   
-    background-color: pink;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    .container-contact{
-        h1{
-            text-align: justify;
-        }
-        position: static;
-        bottom: 0;
-        background-color: rgb(213, 88, 109);
-        border-radius: 16px;
-        padding: 40px;
-        text-align: center;
-        
-        input{
-            width: 100%;
-            margin: 2px;
-        }
-        input.message{
-            height: 200px;
+form {
+    @include themify($themes) {
+        background-color: pink;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: themed("textColor");
+
+        .container-contact {
+            background-color: themed("bg");
+            display: flex;
+            flex-direction: column;
+            height: 50vh;
+            padding: 30px;
         }
 
-        input.submit{
-          background-color: themed("bg"); 
-          color: aqua;
-          padding: 5px;
-          cursor: pointer;
+        .message {
+            height: 4rem; /* Ajusta la altura del input */
+            box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto totales */
         }
     }
-    }
 }
-    

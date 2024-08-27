@@ -11,7 +11,6 @@ import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Contact from "./components/Contact/Contact.jsx";
 
-
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
