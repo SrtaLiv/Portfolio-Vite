@@ -4,7 +4,6 @@ footer{
     @include themify($themes) {
     position: static;
     bottom: 0;
-    background-color: themed("secondary");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +16,8 @@ footer{
         align-items: center;
         flex-direction: column;
         border-radius: 20px;
-        height: 50vh;
         width: 50%;
+        padding-bottom: 20%;
         
         .icons-footer{
             display: flex;
@@ -28,7 +27,7 @@ footer{
                 display: flex;
                 justify-content: space-around;
                 animation: mover 3s linear infinite alternate;
-                color: rgb(146, 97, 105);
+                color: themed("primary");
             }
             a:hover{
                 color: white;

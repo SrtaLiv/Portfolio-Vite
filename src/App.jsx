@@ -4,10 +4,10 @@ import Nav from "./components/Navbar/Navbar.jsx";
 import { DarkModeContext } from "./context/darkModeContext";
 import Inicio from './components/Inicio/Inicio.jsx';
 import Proyectos from './components/Proyectos/Proyectos.jsx';
-import Tecnologias from './components/Tecnologias/Tecnologias.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Contact from "./components/Contact/Contact.jsx";
 import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
+import { StyledEngineProvider } from '@mui/material/styles';
 
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div className={`theme-${darkMode ? "dark" : "light"}`}>
+    <StyledEngineProvider injectFirst>
       <Nav />
 
       <section id="inicio">
@@ -34,10 +35,6 @@ function App() {
         <Proyectos />
       </section>
 
-      <section id="tecnologias-container">
-        <Tecnologias />
-      </section>
-
       <section id="contacto-container">
         <Contact />
       </section>
@@ -45,7 +42,7 @@ function App() {
       <section id="footer-container">
         <Footer />
       </section>
-
+      </StyledEngineProvider>
     </div>
   );
 }

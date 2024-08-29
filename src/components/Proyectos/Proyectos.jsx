@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import Proyecto from '../Proyecto/Proyecto';
 import './proyectos.scss';
 import proyectosData from './ProyectosData';
@@ -5,7 +6,9 @@ import proyectosData from './ProyectosData';
 function Proyectos({ proyectos }) {
     return (
         <div className='proyectos-container'>
-            <h1>Mis proyectos</h1>
+             <h1>
+                Proyectos
+            </h1>
             <div className='proyectos'>
                 {proyectosData.map(proyecto => (
                     <Proyecto

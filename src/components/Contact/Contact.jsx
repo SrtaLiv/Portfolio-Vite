@@ -1,42 +1,71 @@
 import './contact.scss';
+import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { TextField } from '@mui/material';
+import Separator from '../Separator/Separator';
+
+import SendIcon from '@mui/icons-material/Send';
+import { Button } from '@mui/material';
+import Footer from '../Footer/Footer';
 
 function Contact() {
+    const [loading, setLoading] = React.useState(true);
+    function handleClick() {
+        setLoading(true);
+    }
     return (
-        <form action="">
-            <div className='container-contact'>
-                <h1 style={{ color: "#63E6BE" }}>Mandame un mensaje!</h1>
+        <div className='container-contact'>
+            <Separator />
+            <h1>Contactame</h1>
+            <p variant="h4" component="h2">
                 <p>Tienes alguna propuesta
-                    <br />o solo quieres decir hola? Pues adelante</p>
+                    <br />o solo quieres decir hola? Adelante!</p>
+            </p>
+
+            <form action="https://submit-form.com/Ncyecq4Ay">
+                <label htmlFor="name">
+                    <FontAwesomeIcon icon="fa-solid fa-signature" /> NOMBRE
+                </label>
+                <input type="text" placeholder='Nombre*' required />
+                {/* <TextField id="standard-basic" label="Tu nombre" variant="standard" /> */}
+                <label htmlFor="email">
+                    <FontAwesomeIcon icon={faEnvelope} /> EMAIL
+                </label>
+                <input type="Email" name='email' placeholder='Email' required />
 
                 <label htmlFor="">
-                    <FontAwesomeIcon icon="fa-solid fa-signature" />NOMBRE
-                </label>
-                <input type="text" placeholder='Nombre' required />
+                    <FontAwesomeIcon icon={faEnvelope} /> MENSAJE</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Message"
+                        required=""
+                    ></textarea>
 
+                <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+                    ENVIAR MENSAJE
+                </Button>
+                {/* <LoadingButton
+                    size="small"
+                    onClick={handleClick}
+                    endIcon={<SendIcon />}
+                    loading={loading}
+                    loadingPosition="end"
+                    variant="contained"
+                >
+                    Send
+                </LoadingButton> */}
+            </form>
 
-                <label htmlFor="">
-                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "#63E6BE", }} />EMAIL
-                </label>
-                <input type="Email" placeholder='Email' required />
-
-                <label style={{ color: "#63E6BE" }} htmlFor="">
-                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "#63E6BE", }} />MENSAJE</label>
-                <input className='message' type="text" placeholder='Deja tu mensaje' required />
-
-                <input type="submit" className="submit" id="" />
-                <a className='btn-cv' href="src/assets/CURRICULUM.pdf" download="CURRICULUM.pdf" class="btn-download">
+            <a className='btn-cv' href="src/assets/CURRICULUM.pdf" download="CURRICULUM.pdf" class="btn-download">
                 <FontAwesomeIcon icon="fa-solid fa-circle-arrow-down" />
-
                 Descargar CV</a>
 
-                <a className='btn-email' href='#'>Copiar email
-                    <FontAwesomeIcon icon="fa-solid fa-copy" />
-                </a>
-            </div>
-        </form>
+            <a className='btn-email' href='#'>Copiar email
+                <FontAwesomeIcon icon="fa-solid fa-copy" />
+            </a>
+            <Footer />
+        </div >
     )
 }
 
