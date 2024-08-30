@@ -22,6 +22,11 @@
     p{
         animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
     }
+
+    section{
+        animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .20s backwards
+
+    }
 }
 }
 

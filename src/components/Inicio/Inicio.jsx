@@ -8,12 +8,14 @@ function Inicio() {
         <div className='inicio'>
             <h4>Hola, soy Olivia</h4>
             <p>Desarrollo interfaces creativas y faciles de usar.</p>
-            <button>DOWNLOAD CV</button>
-            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
-                <button>
-                    Contacto
-                </button>
-            </Link>
+            <section>
+                <button>DOWNLOAD CV</button>
+                <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
+                    <button>
+                        Contacto
+                    </button>
+                </Link>
+            </section>
         </div>
     )
 }

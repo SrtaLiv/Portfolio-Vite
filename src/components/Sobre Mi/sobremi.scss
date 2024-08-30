@@ -5,13 +5,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 98vh;
+        height: 100vh;
         background-color: themed("bg");
         color: themed("textColor");
 
         @include mobile {
             padding: 20px;
             height: 120%;
+        }
+        h3{
+            margin-bottom: 20px;
         }
 
         h1,
@@ -67,4 +70,5 @@
             transform: translatey(0px);
         }
     }
+
 }
