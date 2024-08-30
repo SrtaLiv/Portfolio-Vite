@@ -15,54 +15,15 @@
     }
 
     h1, h2, h3, h4{
+        animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .30s backwards
+    }
+
+    p{
         animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
     }
 
-       
-    img{
-        width: 100px;
-        height: 100px;
-        border: 0px solid;
-        border-radius: 102px;
-        animation: subirBajar 2s infinite; /* Aplica la animación con duración de 2 segundos y repetición infinita */
-    }
-   
-    .descripcion{
-        margin-top: 20px;
-        display: flex;
-        font-size:1.3rem;
-        justify-content: center;
-        width: 50%;
-        @include mobile{
-            font-size:1rem;   
-        }
-    }
-
-
-    }
-
-    @keyframes reveal {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes subirBajar {
-        0% {
-            transform: translateY(0); 
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(0); 
-        }
-    }
+    
+}
 }
 
 

@@ -11,6 +11,7 @@ import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
 
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import GSAP from './GSAP.jsx';
 
 
 
