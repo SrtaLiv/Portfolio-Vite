@@ -5,10 +5,10 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        height: 80vh;
-        padding: 0 20% 0 20%;        
+        height: 50vh;
+        padding: 0 20% 0 20%;
         background-color: themed("bg");
-        padding-top: 20%;
+        padding-top: 15%;
         color: themed("textColor");
 
         form {
@@ -16,23 +16,22 @@
             flex-direction: column;
             justify-content: center;
             margin-top: 16px;
-            
+
             input {
                 height: 32px;
                 margin-bottom: 12px;
-            }  
-            
+            }
+
             .message {
                 height: 6rem; /* Ajusta la altura del input */
                 padding-top: 10px;
                 box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto totales */
             }
 
-            button{
+            button {
                 margin-top: 16px;
+                width: fit-content;
             }
         }
     }
 }
-
-

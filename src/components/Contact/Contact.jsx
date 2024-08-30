@@ -7,13 +7,16 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Separator from '../Separator/Separator';
 
 import SendIcon from '@mui/icons-material/Send';
-import { Button, IconButton, Snackbar } from '@mui/material';
+import { Button, IconButton, Snackbar, TextField } from '@mui/material';
 import Footer from '../Footer/Footer';
 import { ShareIcon } from 'lucide-react';
 
 function Contact() {
     const [open, setOpen] = useState(false);
 
+    const handleSubmit = (e) => {
+        console.log("Submit")
+    }
 
     const handleClick = () => {
         navigator.clipboard.writeText('anaoliviatodesco@gmail.com') // 
@@ -35,6 +38,9 @@ function Contact() {
             </div>
 
             <form action="https://submit-form.com/Ncyecq4Ay">
+                <TextField id="standard-basic" label="Tu nombre" variant="standard" />
+                
+                
                 <label htmlFor="name">
                     <FontAwesomeIcon icon="fa-solid fa-signature" /> NOMBRE
                 </label>
@@ -55,7 +61,7 @@ function Contact() {
                 ></textarea>
 
                 <Button type="submit" variant="contained" endIcon={<SendIcon />}>
-                    ENVIAR MENSAJE
+                    Enviar
                 </Button>
 
             </form>
@@ -65,10 +71,10 @@ function Contact() {
                 Descargar CV
             </a>
 
-            <Button onClick={handleClick}>
+            <a onClick={handleClick}>
                 <FontAwesomeIcon icon="fa-solid fa-copy" />
                 Copiar Email
-            </Button>
+            </a>
 
             <Snackbar
                 message="Copied to clibboard"
@@ -77,9 +83,6 @@ function Contact() {
                 onClose={() => setOpen(false)}
                 open={open}
             />
-
-
-            <Footer />
         </div >
     )
 }
