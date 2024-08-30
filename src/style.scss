@@ -131,19 +131,6 @@ span {
     }
   }
 
-
-  .reveal{
-    animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
-}
-@keyframes reveal {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  
 }
 

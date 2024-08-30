@@ -11,6 +11,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 
 import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import GSAP from './GSAP.jsx';
 
 
 
