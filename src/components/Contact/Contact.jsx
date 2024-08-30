@@ -1,18 +1,28 @@
 import './contact.scss';
 import * as React from 'react';
+import { useState } from "react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Separator from '../Separator/Separator';
 
 import SendIcon from '@mui/icons-material/Send';
-import { Button } from '@mui/material';
+import { Button, IconButton, Snackbar } from '@mui/material';
 import Footer from '../Footer/Footer';
+import { ShareIcon } from 'lucide-react';
 
 function Contact() {
-    const [loading, setLoading] = React.useState(true);
-    function handleClick() {
-        setLoading(true);
-    }
+    const [open, setOpen] = useState(false);
+
+
+    const handleClick = () => {
+        navigator.clipboard.writeText('anaoliviatodesco@gmail.com') // 
+            .then(() => {
+                setOpen(true);
+                setTimeout(() => setOpen(false), 2000); // Cierra el Snackbar después de 2 segundos
+            })
+            .catch(err => console.error('Failed to copy: ', err));
+    };
     return (
         <div className='container-contact'>
             <Separator />
@@ -47,25 +57,28 @@ function Contact() {
                 <Button type="submit" variant="contained" endIcon={<SendIcon />}>
                     ENVIAR MENSAJE
                 </Button>
-                {/* <LoadingButton
-                    size="small"
-                    onClick={handleClick}
-                    endIcon={<SendIcon />}
-                    loading={loading}
-                    loadingPosition="end"
-                    variant="contained"
-                >
-                    Send
-                </LoadingButton> */}
+
             </form>
 
             <a className='btn-cv' href="src/assets/CURRICULUM.pdf" download="CURRICULUM.pdf" class="btn-download">
                 <FontAwesomeIcon icon="fa-solid fa-circle-arrow-down" />
-                Descargar CV</a>
-
-            <a className='btn-email' href='#'>Copiar email
-                <FontAwesomeIcon icon="fa-solid fa-copy" />
+                Descargar CV
             </a>
+
+            <Button onClick={handleClick}>
+                <FontAwesomeIcon icon="fa-solid fa-copy" />
+                Copiar Email
+            </Button>
+
+            <Snackbar
+                message="Copied to clibboard"
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                autoHideDuration={2000}
+                onClose={() => setOpen(false)}
+                open={open}
+            />
+
+
             <Footer />
         </div >
     )

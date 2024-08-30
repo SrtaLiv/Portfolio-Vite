@@ -8,39 +8,37 @@ import Footer from './components/Footer/Footer.jsx';
 import Contact from "./components/Contact/Contact.jsx";
 import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
 import { StyledEngineProvider } from '@mui/material/styles';
-
-import ReactDOM from 'react-dom'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import GSAP from './GSAP.jsx';
-
-
+// import { TransitionProvider } from './context/TransitionContext.jsx';
+// import TransitionComponent from './components/TransitionComponent/TransitionComponent.jsx'; // Asumiendo que este componente existe
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
     <div className={`theme-${darkMode ? "dark" : "light"}`}>
-    <StyledEngineProvider injectFirst>
-      <Nav />
+      <StyledEngineProvider injectFirst>
+        <Nav />
 
-      <section id="inicio">
-        <Inicio />
+        <section id="inicio">
+          <Inicio />
 
-      </section>
+        </section>
 
-      <section id="sobre-mi">
-        <Sobremi />
-      </section>
+        <section id="sobre-mi">
+          <Sobremi />
+        </section>
 
-      <section id="proyecto">
-        <Proyectos />
-      </section>
+        <section id="proyecto">
+          <Proyectos />
+        </section>
 
-      <section id="contacto-container">
-        <Contact />
-      </section>
+        <section id="contacto-container">
+          <Contact />
+        </section>
 
-      {/* <section id="footer-container">
+        {/* <section id="footer-container">
         <Footer />
       </section> */}
       </StyledEngineProvider>
