@@ -15,19 +15,21 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-top: 16px;
             
             input {
-                height: 34px;
-            } 
-            &:focus {
-                outline: none;
-                border-color: #3f51b5;
-            }
+                height: 32px;
+                margin-bottom: 12px;
+            }  
             
             .message {
                 height: 6rem; /* Ajusta la altura del input */
                 padding-top: 10px;
                 box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto totales */
+            }
+
+            button{
+                margin-top: 16px;
             }
         }
     }

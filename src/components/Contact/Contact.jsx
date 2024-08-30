@@ -16,11 +16,13 @@ function Contact() {
     return (
         <div className='container-contact'>
             <Separator />
-            <h1>Contactame</h1>
-            <p variant="h4" component="h2">
-                <p>Tienes alguna propuesta
-                    <br />o solo quieres decir hola? Adelante!</p>
-            </p>
+            <div>
+                <h1>Contactame</h1>
+                <p variant="h4" component="h2">
+                    <p>Tienes alguna <span>propuesta</span>
+                        <br />o solo quieres saludar? Adelante!</p>
+                </p>
+            </div>
 
             <form action="https://submit-form.com/Ncyecq4Ay">
                 <label htmlFor="name">
@@ -35,12 +37,12 @@ function Contact() {
 
                 <label htmlFor="">
                     <FontAwesomeIcon icon={faEnvelope} /> MENSAJE</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Message"
-                        required=""
-                    ></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Deja tu mensaje"
+                    required=""
+                ></textarea>
 
                 <Button type="submit" variant="contained" endIcon={<SendIcon />}>
                     ENVIAR MENSAJE

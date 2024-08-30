@@ -3,7 +3,7 @@ import './sobremi.scss';
 
 function Sobremi() {
     return (
-        <div className='inicio'>
+        <div className='sobremi'>
             <p>👋</p>
             <h4>Hola, Soy Olivia</h4>
 

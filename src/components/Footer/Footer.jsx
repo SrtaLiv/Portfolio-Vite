@@ -30,7 +30,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <a href='https://github.com/SrtaLiv/Portfolio-Vite'>Diseñado y Creado por Ana Olivia Todesco</a>
+                {/* <a href='https://github.com/SrtaLiv/Portfolio-Vite'>Diseñado y Creado por Ana Olivia Todesco</a> */}
         </footer >
     )
 }

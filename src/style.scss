@@ -10,11 +10,11 @@ $themes: (
     textColor: #353534,
     bg: #f6f5f1,
     bg2: #c9d596,
-    logo: darkblue,
+    logo: #247a4b,
     bgSoft: #f6f3f3,
     textColorSoft: #555,
     border: lightgray,
-    primary: #7fab93,
+    primary: #52ad7b,
     secondary: #ffc0cb
 
   ),
@@ -22,7 +22,7 @@ $themes: (
     textColor: whitesmoke,
     bg: #222,
     bg2: #729808,
-    logo: white,
+    logo: #247a4b,
     bgSoft: #333,
     textColorSoft: lightgray,
     border: #444,
@@ -131,5 +131,19 @@ span {
     }
   }
 
-  
+
+  .reveal{
+    animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
 }
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+}
+

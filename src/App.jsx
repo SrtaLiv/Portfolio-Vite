@@ -39,9 +39,9 @@ function App() {
         <Contact />
       </section>
 
-      <section id="footer-container">
+      {/* <section id="footer-container">
         <Footer />
-      </section>
+      </section> */}
       </StyledEngineProvider>
     </div>
   );
