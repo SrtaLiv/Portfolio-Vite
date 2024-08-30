@@ -2,18 +2,21 @@ import { useEffect, useState } from 'react';
 import './sobremi.scss';
 import Footer from '../Footer/Footer';
 
-const languages = [
-    { id: 1, name: 'JavaScript', type: 'Frontend' },
-    { id: 2, name: 'Angular', type: 'Frontend' },
-    { id: 3, name: 'Java', type: 'Backend' },
-    { id: 4, name: 'TypeScript', type: 'Frontend' },
-    { id: 5, name: 'C#', type: 'Backend' },
+const technologies = [
+    { id: 1, name: 'Angular', type: 'Frontend' },
+    { id: 2, name: 'Java', type: 'Backend' },
+    { id: 3, name: 'Spring Boot', type: 'Backend' },
+    { id: 4, name: 'Docker', type: 'Backend' },
+    { id: 5, name: 'React', type: 'Frontend' },
     { id: 6, name: 'HTML', type: 'Frontend' },
     { id: 7, name: 'CSS', type: 'Frontend' },
+    { id: 8, name: 'JavaScript', type: 'Frontend' },
+    { id: 9, name: 'TypeScript', type: 'Frontend' },
+    { id: 10, name: 'Figma', type: 'Frontend' },
 ];
 function Sobremi() {
     const [filter, setFilter] = useState(''); //estado que va a cambiar segun el boton que clickeemos
-    
+
     const handleClick = (filterType) => { //pide como parametro Frontend, Backend..
         setFilter(filterType); //setea el estado con el parametro que le pasamos
     };
@@ -44,16 +47,14 @@ function Sobremi() {
                                 //si coincide con el language.type == Frontend, Backend muestra SOLO los que coincidan con el filtro
                                 //si el filtro es FullStack muestra todo.
                             }
-                            {languages
-                                .filter(language => filter === '' || language.type === filter || filter === 'FullStack') 
+                            {technologies
+                                .filter(language => filter === '' || language.type === filter || filter === 'FullStack')
                                 .map(language => (
                                     <li key={language.id}>{language.name}</li>
                                 ))
                             }
                         </ul>
                     </div>
-
-                    <Footer />
                 </p>
             </div>
         </div>

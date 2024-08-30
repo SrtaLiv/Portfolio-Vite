@@ -33,6 +33,11 @@
             animation: subirBajar 6s ease-in-out infinite;
         }
 
+        ul{
+            display: flex;
+            flex-direction: row;
+        }
+
         .descripcion {
             margin-top: 20px;
             display: flex;
