@@ -6,8 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Inicio() {
     return (
         <div className='inicio'>
-            <h4>Hola, soy Olivia</h4>
-            <p>Desarrollo interfaces creativas y faciles de usar.</p>
+            <h1>Olivia Todesco</h1>
+            <h3>Full Stack Developer  • Creadora de contenido</h3>
+            <h4>Desarrollo interfaces creativas y faciles de usar.</h4>
             <section>
                 <button>DOWNLOAD CV</button>
                 <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
