@@ -2,59 +2,17 @@ import { useEffect, useState } from 'react';
 import './sobremi.scss';
 import Footer from '../Footer/Footer';
 
-const technologies = [
-    { id: 1, name: 'Angular', type: 'Frontend' },
-    { id: 2, name: 'Java', type: 'Backend' },
-    { id: 3, name: 'Spring Boot', type: 'Backend' },
-    { id: 4, name: 'Docker', type: 'Backend' },
-    { id: 5, name: 'React', type: 'Frontend' },
-    { id: 6, name: 'HTML', type: 'Frontend' },
-    { id: 7, name: 'CSS', type: 'Frontend' },
-    { id: 8, name: 'JavaScript', type: 'Frontend' },
-    { id: 9, name: 'TypeScript', type: 'Frontend' },
-    { id: 10, name: 'Figma', type: 'Frontend' },
-];
 function Sobremi() {
-    const [filter, setFilter] = useState(''); //estado que va a cambiar segun el boton que clickeemos
-
-    const handleClick = (filterType) => { //pide como parametro Frontend, Backend..
-        setFilter(filterType); //setea el estado con el parametro que le pasamos
-    };
-
     return (
-        <div className='sobremi'>
-            <h1>Sobre mi</h1>
-            <img alt="Foto perfil" draggable="true" src="https://pbs.twimg.com/profile_images/1802921319207407616/9X6R2I2f_400x400.jpg" />
+        <div className='sobre-mi'>
+            <h2>Sobre mi</h2>
             <div className='descripcion'>
+                <img alt="Foto perfil" draggable="true" src="https://pbs.twimg.com/profile_images/1802921319207407616/9X6R2I2f_400x400.jpg" />
                 <p>
-                    Mi nombre es <span>Ana Olivia Todesco</span>, tengo 19 años y soy de Argentina. Comencé en el mundo de la programación de forma autodidacta en 2021.
+                    Mi nombre es <span>Ana Olivia Todesco</span>, soy de Argentina y me especializo en el Desarrollo Web.
                     <br /><br />
-                    Actualmente, estudio una Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas para continuar mi formación. En cada desafío doy lo mejor de mí y busco crecer como profesional en este ámbito. Me apasiona el Desarrollo Web y el Diseño de Interfaces, áreas en las que me especializo.
+                    Actualmente, estudio una Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas para continuar mi formación. En cada desafío doy lo mejor de mí y busco crecer como profesional en este ámbito. Además de estudiar, creo contenido en <a href="https://www.instagram.com/oliviatodesco/" target="_blank" rel="noopener noreferrer">Instagram</a>, donde recomiendo recursos para programadores y diseñadores.
                     <br /><br />
-                    Además de estudiar, creo contenido en <a href="https://www.instagram.com/oliviatodesco/" target="_blank" rel="noopener noreferrer">Instagram</a>, donde recomiendo recursos para programadores y diseñadores.
-                    <br /> <br />
-                    Algunas de las tecnologias que mejor utilizo son
-                    <br /> <br />
-
-                    <div>
-                        <button onClick={() => handleClick('FullStack')} className='btn'>FullStack</button>
-                        <button onClick={() => handleClick('Frontend')} className='btn'>Frontend</button>
-                        <button onClick={() => handleClick('Backend')} className='btn'>Backend</button>
-
-                        <ul>
-                            {
-                                //si el filtro esta vacio muestra todo. (estado inicial)
-                                //si coincide con el language.type == Frontend, Backend muestra SOLO los que coincidan con el filtro
-                                //si el filtro es FullStack muestra todo.
-                            }
-                            {technologies
-                                .filter(language => filter === '' || language.type === filter || filter === 'FullStack')
-                                .map(language => (
-                                    <li key={language.id}>{language.name}</li>
-                                ))
-                            }
-                        </ul>
-                    </div>
                 </p>
             </div>
         </div>
