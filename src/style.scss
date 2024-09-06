@@ -19,14 +19,14 @@ $themes: (
   ),
   dark: (
     textColor: whitesmoke,
-    textColorDark: #021306,
-    bg: #0e0e10,
+    verdeDark: #021306,
+    bg: #021306,
     bg2: #000000,
     logo: #247a4b,
     bgSoft: #333,
     textColorSoft: lightgray,
     border: #444,
-    primary: #21cf60,
+    primary: #1ed760,
     secondary: #ffc0cb
   )
 );
@@ -130,7 +130,6 @@ span {
       padding-left: 3rem;
       padding-right: 3rem;
     }
-
   }
 
   //celular
@@ -150,8 +149,5 @@ span {
   h3,
   h4 {
     animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
-  }
-
-  h2 {
   }
 }

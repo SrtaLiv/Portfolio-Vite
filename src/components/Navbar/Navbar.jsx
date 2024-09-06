@@ -14,7 +14,7 @@ function Nav() {
         <header>
             <nav className='nav'>
             <Link className='nav-link' to="inicio" smooth={true} duration={600}>
-                <h1 className="cssanimation sequence rotateXIn">Liv</h1>
+                <h1 className="cssanimation sequence rotateXIn">Oli</h1>
             </Link>
                 
                 <div className='nav-menu'>

@@ -1,4 +1,5 @@
 @import "../../style.scss";
+
 .sobre-mi {
     @include themify($themes) {
         background-color: themed("bg");

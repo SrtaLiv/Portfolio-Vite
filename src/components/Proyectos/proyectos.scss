@@ -3,8 +3,6 @@
 .proyectos {
     @include themify($themes) {
         background-color: themed("bg");
-        display: flex;
-        flex-direction: column;
         color: themed("textColor");
         min-height:95vh;
 
@@ -15,7 +13,7 @@
             background-image: url("https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg");
             background-size: cover;
             height: 30vh;
-            transition: opacity 0.3s ease; /* Suaviza el cambio de opacidad */
+            transition: opacity 0.3s ease;
             position: relative;
             overflow: hidden;
         }

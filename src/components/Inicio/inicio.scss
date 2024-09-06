@@ -1,49 +1,66 @@
 @import "../../style.scss";
 
-.inicio{
+.inicio {
     @include themify($themes) {
-    display: flex;
-    flex-direction: column;
-    align-items: justify-content;
-    justify-content: center;
-    min-height: 90vh;
-    background-color: themed("primary");
-    color: themed("021306");
-    
-    @include mobile{
-        height: 120%; 
-    }
+        display: flex;
+        flex-direction: column;
+        align-items: justify-content;
+        justify-content: center;
+        min-height: 90vh;
 
-    h1{
-        font-size: 3rem;
-        font-weight: 700;
+        background: linear-gradient(to bottom, #f6f5f1 9%, #46dc7c 40%, #1fd15f 100%);
         color: themed("021306");
-        margin-bottom: 20px;
-    }
 
-    h3{
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: themed("021306");
-        margin-bottom: 20px;
-    }
+        @include mobile {
+            height: 120%;
+        }
 
-    h4{
-        font-size: 1rem;
-        font-weight: 400;
-        color: themed("021306");
-        margin-bottom: 20px;
-    }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: themed("021306");
+            margin-bottom: 20px;
+        }
 
-    p{
-        animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .25s backwards
-    }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: themed("021306");
+            margin-bottom: 20px;
+        }
 
-    section{
-        animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) .20s backwards
+        h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: themed("021306");
+            margin-bottom: 20px;
+        }
 
+        p {
+            animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
+        }
+
+        section {
+            animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s backwards;
+        }
+
+        button {
+            background-color: themed("verdeDark");
+            color: themed("textColor");
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: ease-in 0.2s;
+        }
+        button:hover {
+            background-color: #32383f;
+            cursor: pointer;
+        }
+        .btn-contacto {
+            background-color: rgba(0, 255, 38, 0.113);
+        }
+        .btn-contacto:hover {
+            background-color: rgba(0, 255, 38, 0.336);
+        }
     }
 }
-}
-
-
