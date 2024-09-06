@@ -5,21 +5,23 @@ footer {
         position: static;
         bottom: 0;
         height: 100%;
-        background-color: themed("bg");
-        .contenedor-footer {
-   
-            flex-direction: column;
-            border-radius: 20px;
-            width: 50%;
-            a {
-                margin: 6px;
-                justify-content: space-around;
-                animation: mover 3s linear infinite alternate;
-                color: themed("primary");
-            }
-            a:hover {
-                color: #247a4b;
-            }
+        background-color: themed("bgSoft");
+        min-height: 30vh;
+        min-width: 30vh;
+        color: themed("text");
+
+        a {
+            margin: 6px;
+            justify-content: space-around;
         }
+
+        a:hover {
+            color: themed("primary");
+        }
+        .link-mail {
+            color: themed("primary");
+            text-decoration: underline;
+        }
+
     }
 }

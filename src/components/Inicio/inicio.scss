@@ -7,34 +7,14 @@
         align-items: justify-content;
         justify-content: center;
         min-height: 90vh;
-
-        background: linear-gradient(to bottom, #f6f5f1 9%, #46dc7c 40%, #1fd15f 100%);
-        color: themed("021306");
+        color: themed("text");
+        background-color: themed("bg");
 
         @include mobile {
             height: 120%;
         }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: themed("021306");
-            margin-bottom: 20px;
-        }
 
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: themed("021306");
-            margin-bottom: 20px;
-        }
-
-        h4 {
-            font-size: 1rem;
-            font-weight: 400;
-            color: themed("021306");
-            margin-bottom: 20px;
-        }
 
         p {
             animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
@@ -43,6 +23,13 @@
         section {
             animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s backwards;
             
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
         }
 
         button {

@@ -18,7 +18,6 @@ function App() {
     <div className={`theme-${darkMode ? "dark" : "light"}`}>
       <StyledEngineProvider injectFirst>
         <Nav />
-
         <section id="inicio">
           <Inicio />
         </section>
@@ -35,9 +34,9 @@ function App() {
           <Contact />
         </section>
 
-        {/* <section id="footer">
+        <section id="footer">
           <Footer />
-        </section> */}
+        </section>
       </StyledEngineProvider>
     </div>
   );

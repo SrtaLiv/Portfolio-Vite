@@ -8,24 +8,21 @@
 $themes: (
   light: (
     textColor: #353534,
-    bg: #f6f5f1,
-    bg2: #ffffff,
-    bgSoft: rgba(8, 62, 3, 0.212),
+    bg: #FFFFFF,
+    text: #112969,
+    bgSoft: #F6F8FA,
     textColorSoft: #555,
     border: rgb(34, 34, 34),
-    primary: #52ad7b,
-    secondary: #ffc0cb
+    primary: #F5C3B4,
   ),
   dark: (
     textColor: whitesmoke,
-    verdeDark: #021306,
-    bg: #021306,
-    bg2: #000000,
-    bgSoft: #1b471a,
+    bg: #020D14,
+    bgSoft: #091922,
+    text: #ffffff,
     textColorSoft: lightgray,
     border: #444,
-    primary: #1ed760,
-    secondary: #ffc0cb
+    primary: #C6FA19,
   )
 );
 
@@ -148,4 +145,18 @@ span {
   h4 {
     animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
   }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* O un movimiento hacia arriba/abajo */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Vuelve a su posición original */
+    }
+  }
+
+
+  
 }
