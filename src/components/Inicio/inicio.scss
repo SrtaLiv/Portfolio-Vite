@@ -33,25 +33,21 @@
         }
 
         button {
-            background-color: themed("verdeDark");
-            color: themed("textColor");
+            background-color: opacify($color: #000000, $amount: 0);
+            color: themed("primary");
             padding: 11px 30px;
             border-radius: 20px;
             font-weight: 600;
             transition: ease-in 0.2s;
-            border: solid themed("verdeDark") 2px;
+            border: solid themed("primary") 2px;
         }
-        button:hover {
-            background-color: themed("bgSoft");
-            cursor: pointer;
-        }
+        
         .btn-contacto {
             border: 2px solid themed("bg");
-            background-color: rgba(0, 0, 0, 0.132);
+            background-color: themed("primary");
             margin: 0 1rem 1rem 0;
+            color: themed("bg");
         }
-        .btn-contacto:hover {
-            background-color: themed("bgSoft");
-        }
+     
     }
 }

@@ -84,13 +84,14 @@ a {
   transition: 0.2s ease-in-out;
 }
 
-a:visited {
-  color: inherit; /* Mantiene el mismo color que el enlace no visitado */
+a, button:hover {
+    cursor: pointer;
 }
 
-span {
-  font-weight: bold;
-  color: #417e5c;
+
+
+a:visited {
+  color: inherit; /* Mantiene el mismo color que el enlace no visitado */
 }
 
 //COLORES
@@ -146,6 +147,19 @@ span {
     animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
   }
 
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.8rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  h4{
+    font-size: 0.8rem;
+  }
+
   @keyframes reveal {
     0% {
       opacity: 0;
@@ -156,6 +170,7 @@ span {
       transform: translateY(0); /* Vuelve a su posición original */
     }
   }
+
 
 
   
