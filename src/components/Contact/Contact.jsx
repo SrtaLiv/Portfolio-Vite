@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faSignature, faCopy, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Button, Snackbar, TextField, Box } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import Separator from '../Separator/Separator';
 
 function Contact() {
     const [open, setOpen] = useState(false);
@@ -21,7 +20,6 @@ function Contact() {
 
     return (
         <div className='container-contact'>
-            <Separator />
             <div>
                 <h1>Contactame</h1>
                 <div variant="h4" component="h2">

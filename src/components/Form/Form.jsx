@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useState } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Separator from '../Separator/Separator';
 import { Button, IconButton, Snackbar, TextField, Box } from '@mui/material';
 
 function Form() {
@@ -49,7 +48,6 @@ function Form() {
 
     return (
         <div className='container-contact'>
-            <Separator />
             <div>
                 <h1>Contactame</h1>
                 <p variant="h4" component="h2">

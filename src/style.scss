@@ -9,25 +9,24 @@ $themes: (
   light: (
     textColor: #353534,
     bg: #f6f5f1,
-    bg2: #c9d596,
+    bg2: #ffffff,
     logo: #247a4b,
     bgSoft: #f6f3f3,
     textColorSoft: #555,
-    border: lightgray,
+    border: rgb(34, 34, 34),
     primary: #52ad7b,
     secondary: #ffc0cb
-
   ),
   dark: (
     textColor: whitesmoke,
     textColorDark: #021306,
     bg: #0e0e10,
-    bg2: #729808,
+    bg2: #000000,
     logo: #247a4b,
     bgSoft: #333,
     textColorSoft: lightgray,
     border: #444,
-    primary: #21CF60,
+    primary: #21cf60,
     secondary: #ffc0cb
   )
 );
@@ -89,6 +88,11 @@ a {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
+
+a:visited {
+  color: inherit; /* Mantiene el mismo color que el enlace no visitado */
+}
+
 span {
   font-weight: bold;
   color: #417e5c;
@@ -99,43 +103,39 @@ span {
 /*=============== VARIABLES CSS ===============*/
 :root {
 
-  --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  --hue: 174;
-  --sat: 63%;
-
-  --first-color: hsl(var(--hue), var(--sat), 40%);
-  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 8%, 35%);
-  --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #fff;
-
-  /*========== Font and typography ==========*/
-  --body-font: "Open Sans", sans-serif;
-
-  --h1-font-size: 3.5rem;
-  --h2-font-size: 2.5rem;
-  --h3-font-size: 1.5rem;
-
-  --normal-font-size: 0.938rem;
-  --tiny-font-size: 0.625rem;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-
-
-  .inicio, .sobre-mi, .proyectos, .contacto {
+  .inicio,
+  .sobre-mi,
+  .proyectos,
+  .container-contact,
+  footer {
+    border-bottom: 1px solid gray;
     padding-left: 6rem;
     padding-right: 6rem;
-    border-bottom: 1px solid var(--container-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  @media screen and (min-width: 968px) {
-    :root {
-      --normal-font-size: 1rem;
+  //tablet
+  @media screen and (max-width: 768px) {
+    .inicio,
+    .sobre-mi,
+    .proyectos,
+    .container-contact {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  //celular
+  @media screen and (max-width: 480px) {
+    .inicio,
+    .sobre-mi,
+    .proyectos,
+    .container-contact {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -143,13 +143,10 @@ span {
   h2,
   h3,
   h4 {
-      animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
-    }
-
-  h2{
-    margin-bottom: 1rem;
+    animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
   }
 
-  
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
-

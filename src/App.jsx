@@ -10,8 +10,6 @@ import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
 import { StyledEngineProvider } from '@mui/material/styles';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import GSAP from './GSAP.jsx';
-// import { TransitionProvider } from './context/TransitionContext.jsx';
-// import TransitionComponent from './components/TransitionComponent/TransitionComponent.jsx'; // Asumiendo que este componente existe
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -23,14 +21,13 @@ function App() {
 
         <section id="inicio">
           <Inicio />
-
         </section>
 
         <section id="sobre-mi">
           <Sobremi />
         </section>
 
-        <section id="proyecto">
+        <section id="proyectos">
           <Proyectos />
         </section>
 
@@ -38,9 +35,9 @@ function App() {
           <Contact />
         </section>
 
-       <section id="footer-container">
-        <Footer />
-      </section> 
+        {/* <section id="footer">
+          <Footer />
+        </section> */}
       </StyledEngineProvider>
     </div>
   );

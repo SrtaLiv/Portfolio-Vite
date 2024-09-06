@@ -1,9 +1,7 @@
 @import "../../style.scss";
 .sobre-mi {
     @include themify($themes) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
         background-color: themed("bg");
         color: themed("textColor");
         height: 100vh;

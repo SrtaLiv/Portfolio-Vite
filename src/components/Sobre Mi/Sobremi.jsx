@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './sobremi.scss';
-import Footer from '../Footer/Footer';
 
 function Sobremi() {
     return (

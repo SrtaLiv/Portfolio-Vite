@@ -1,68 +1,13 @@
 @import "../../style.scss";
 
-// footer{
-//     @include themify($themes) {
-//     position: static;
-//     bottom: 0;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     height: 15vh;
-
-//     .contenedor-footer{
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-direction: column;
-//         border-radius: 20px;
-//         width: 50%;
-//         padding-bottom: 20%;
-
-//         .icons-footer{
-//             display: flex;
-//             gap: 15px;
-//             justify-content: center;
-//             a{
-//                 display: flex;
-//                 justify-content: space-around;
-//                 animation: mover 3s linear infinite alternate;
-//                 color: themed("primary");
-//             }
-//             a:hover{
-//                 color: #247a4b;
-//             }
-//             // .delay{
-//             //     animation-delay: 1s;
-//             // }
-
-//             // @keyframes mover {
-//             //     from {
-//             //     transform: translateY(-10px);
-//             //     }
-//             //     to {
-//             //     transform: translateY(10px);
-//             //     }
-//             // }
-//     }
-// }
-// }
-// }
-
 footer {
     @include themify($themes) {
         position: static;
         bottom: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 15vh;
+        height: 100%;
         background-color: themed("bg");
         .contenedor-footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+   
             flex-direction: column;
             border-radius: 20px;
             width: 50%;

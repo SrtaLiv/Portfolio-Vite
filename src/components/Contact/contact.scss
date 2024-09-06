@@ -5,12 +5,10 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        height: 50vh;
-        padding: 0 20% 0 20%;
-        background-color: themed("bg");
-        padding-top: 15%;
+        height: 70vh;
+        background-color: themed("bg2");
         color: themed("textColor");
-
+        
         form {
             display: flex;
             flex-direction: column;
@@ -32,6 +30,14 @@
                 margin-top: 16px;
                 width: fit-content;
             }
+        }
+        
+        a{
+            color: themed("primary");
+            margin-top: 16px;
+        }
+        a:hover{
+            color: themed("logo");
         }
     }
 }

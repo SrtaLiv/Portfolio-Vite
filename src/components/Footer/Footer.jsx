@@ -10,7 +10,9 @@ function Footer() {
     }
     return (
         <footer>
-                <div className='contenedor-footer'>
+                <div className='footer'>
+                    <h4>Ponte en contacto para colaborar o di hola en</h4>
+                    <a href="anaoliviatodesco@gmail.com">anaoliviatodesco@gmail.com</a>
                     <div className='icons-footer'>
                         <a href={redes.x} className='delay' target="_blank">
                             <FontAwesomeIcon icon="fa-brands fa-x-twitter" size='2x' />
