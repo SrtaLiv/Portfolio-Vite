@@ -128,7 +128,9 @@ span {
 
 
   .inicio, .sobre-mi, .proyectos, .contacto {
-    padding: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    border-bottom: 1px solid var(--container-color);
   }
 
   @media screen and (min-width: 968px) {

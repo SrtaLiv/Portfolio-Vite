@@ -1,19 +1,19 @@
 const proyectosData = [
     {
         id: 1,
-        titulo: 'Proyecto 1',
-        descripcion: 'Descripción del Proyecto 1',
+        titulo: 'Sin Culpas',
+        descripcion: 'Aplicacion de registr de comidas',
         tecnologias: ['React', 'JavaScript'],
-        imagenUrl: 'imagen1.jpg',
-        enlace: 'https://proyecto1.com'
+        imagenUrl: 'https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg',
+        enlace: 'https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg'
     },
     {
         id: 2,
-        titulo: 'Proyecto 2',
-        descripcion: 'Descripción del Proyecto 2',
-        tecnologias: ['Node.js', 'Express'],
-        imagenUrl: 'imagen2.jpg',
-        enlace: 'https://proyecto2.com'
+        titulo: 'Sin Culpas',
+        descripcion: 'Aplicacion de registr de comidas',
+        tecnologias: ['React', 'JavaScript'],
+        imagenUrl: 'https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg',
+        enlace: 'https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg'
     },
 ];
 
