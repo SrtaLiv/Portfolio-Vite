@@ -5,45 +5,31 @@ header{
   background-color: themed("bg");
   z-index: 1000;
   position: absolute;
+  height: 6%;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
-  margin-left: 40px;
-  position: fixed;
-  margin: 0;
-  padding: 0 5% 0 5%;
-  align-items: center;
-  justify-content: space-between;
-  vertical-align: baseline; 
+  position: fixed; //ver con q queda mejor..
+  
     .nav{
       height: var(--header-height);
       color: themed("textColor");
       background-color: themed("bg");
       align-items: center;
       justify-content: space-between;
-      vertical-align: baseline; 
       display: flex;
-      font-size: .8rem;
       width: 100%;
-      
-     
+    
       .nav-logo{
         color: themed("textColor");
         font-weight: 600;
-        margin: 0; 
-        font-size: var(--h1-font-size);
       }
       
       .nav-menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600; 
-        justify-content: space-around;
-        
+        font-weight: 600;       
         
         @include mobile{
+          justify-content: center;
           background-color: themed("bg");
           border-top: 2px solid themed("textColor");
           bottom: 0;
@@ -61,14 +47,10 @@ header{
           list-style: none;
           display: flex;
           align-content: center;
-
           gap: 20px;
-          @include mobile{
-            margin-bottom: 20px;
-          }
+
           .nav-item {
-            padding: 1.1rem 0 .8rem 0;
-           
+
             .nav-icon{
               display: none;
               @include mobile{
@@ -76,9 +58,6 @@ header{
               }
             }
             .nav-link {
-              text-decoration: none;
-              position: relative;
-              margin-top: 1rem;
               position: relative;
               display: flex;
               flex-direction: column;
@@ -88,7 +67,6 @@ header{
               color: themed("textColor");
             }
             .nav-link:hover{
-              border-bottom: 1px;
               color: themed("primary");
             }
             

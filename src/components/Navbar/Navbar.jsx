@@ -23,12 +23,12 @@ function Nav() {
                         <li className='nav-item'>
                             <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-house" />
-                                    Sobre Mi
+                                    Sobre mi
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='proyecto'smooth={true} duration={600}>
+                            <Link className='nav-link' to='proyectos'smooth={true} duration={600}>
                                     <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-diagram-project" />
                                     Proyectos
                             </Link>

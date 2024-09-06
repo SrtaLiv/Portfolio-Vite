@@ -6,16 +6,15 @@
         display: flex;
         flex-direction: column;
         color: themed("textColor");
-        height: 100vh;
+        min-height:95vh;
 
         .proyecto-card {
             padding: 13px;
-            margin-top: 20px;
+            margin-top: 10px;
             border-radius: 20px;
-            max-width: 345px;
             background-image: url("https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg");
             background-size: cover;
-            height: 200px;
+            height: 30vh;
             transition: opacity 0.3s ease; /* Suaviza el cambio de opacidad */
             position: relative;
             overflow: hidden;

@@ -102,13 +102,12 @@ span {
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-
-
   .inicio,
   .sobre-mi,
   .proyectos,
   .container-contact,
-  footer {
+  footer,
+  header {
     border-bottom: 1px solid gray;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -117,15 +116,21 @@ span {
     justify-content: center;
   }
 
+  header {
+    border: none;
+  }
+
   //tablet
   @media screen and (max-width: 768px) {
     .inicio,
     .sobre-mi,
     .proyectos,
-    .container-contact {
+    .container-contact,
+    header {
       padding-left: 3rem;
       padding-right: 3rem;
     }
+
   }
 
   //celular
@@ -133,7 +138,8 @@ span {
     .inicio,
     .sobre-mi,
     .proyectos,
-    .container-contact {
+    .container-contact,
+    header {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -147,6 +153,5 @@ span {
   }
 
   h2 {
-    margin-bottom: 1rem;
   }
 }
