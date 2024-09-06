@@ -42,25 +42,29 @@
 
         section {
             animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s backwards;
+            
         }
 
         button {
             background-color: themed("verdeDark");
             color: themed("textColor");
-            padding: 10px 30px;
+            padding: 11px 30px;
             border-radius: 20px;
             font-weight: 600;
             transition: ease-in 0.2s;
+            border: solid themed("verdeDark") 2px;
         }
         button:hover {
-            background-color: #32383f;
+            background-color: themed("bgSoft");
             cursor: pointer;
         }
         .btn-contacto {
-            background-color: rgba(0, 255, 38, 0.113);
+            border: 2px solid themed("bg");
+            background-color: rgba(0, 0, 0, 0.132);
+            margin: 0 1rem 1rem 0;
         }
         .btn-contacto:hover {
-            background-color: rgba(0, 255, 38, 0.336);
+            background-color: themed("bgSoft");
         }
     }
 }
