@@ -17,18 +17,14 @@ function Nav() {
                     <h3 className='logo'>Olivia</h3>
                 </Link>
 
-                <div className='nav-item'>{darkMode ? (
-                    <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
-                ) : (
-                    <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
-                )}
-                </div>
+
 
                 <div className='nav-menu'>
                     <ul className='nav-list'>
                         <li className='burguer'>
                             <FontAwesomeIcon icon="fa-solid fa-bars" />
                         </li>
+
                         <li className='nav-item'>
                             <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
                                 Sobre mi
@@ -46,11 +42,16 @@ function Nav() {
                                 Contacto
                             </Link>
                         </li>
-
+                        <div className='nav-item'>{darkMode ? (
+                            <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
+                        ) : (
+                            <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
+                        )}
+                        </div>
                     </ul>
                 </div>
 
-          
+
 
             </nav>
         </header>

@@ -4,7 +4,6 @@
   font-style: normal;
 }
 
-
 .playwrite-cu {
   font-family: "Playwrite CU", system-ui;
   font-optical-sizing: auto;
@@ -12,28 +11,27 @@
   font-style: normal;
 }
 
-
 //  LIGHT AND DARK MODE
 $themes: (
   light: (
     textColor: #353534,
-    bg: #FFFFFF,
+    bg: #ffffff,
     text: #112969,
-    bgSoft: #F6F8FA,
+    bgSoft: #f6f8fa,
     textColorSoft: #555,
     border: rgb(34, 34, 34),
-    primary: #F5C3B4,
-    bgNav: #EEEFF5
+    primary: #f5c3b4,
+    bgNav: #eeeff5
   ),
   dark: (
     textColor: whitesmoke,
-    bg: #020D14,
+    bg: #020d14,
     bgSoft: #091922,
     text: #ffffff,
     textColorSoft: lightgray,
     border: #444,
-    primary: #C6FA19,
-    bgNav: #16252D
+    primary: #c6fa19,
+    bgNav: #16252d
   )
 );
 
@@ -94,8 +92,9 @@ a {
   transition: 0.2s ease-in-out;
 }
 
-a, button:hover {
-    cursor: pointer;
+a,
+button:hover {
+  cursor: pointer;
 }
 
 a {
@@ -103,7 +102,6 @@ a {
   color: black;
   position: relative;
 }
-
 
 a:visited {
   color: inherit; /* Mantiene el mismo color que el enlace no visitado */
@@ -117,8 +115,7 @@ a:visited {
   .sobre-mi,
   .proyectos,
   .container-contact,
-  footer,
-  header {
+  footer {
     border-bottom: 1px solid gray;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -129,6 +126,8 @@ a:visited {
 
   header {
     border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   //tablet
@@ -136,8 +135,7 @@ a:visited {
     .inicio,
     .sobre-mi,
     .proyectos,
-    .container-contact,
-    header {
+    .container-contact {
       padding-left: 3rem;
       padding-right: 3rem;
     }
@@ -148,8 +146,7 @@ a:visited {
     .inicio,
     .sobre-mi,
     .proyectos,
-    .container-contact,
-    header {
+    .container-contact {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -162,21 +159,21 @@ a:visited {
     animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
   }
 
-  h1{
+  h1 {
     font-size: 2rem;
   }
-  h2{
+  h2 {
     font-size: 1.8rem;
   }
-  h3{
+  h3 {
     font-size: 1rem;
   }
-  h4{
+  h4 {
     font-size: 0.8rem;
   }
 
-  a{
-    font-weight:500;
+  a {
+    font-weight: 500;
   }
 
   @keyframes reveal {
@@ -189,8 +186,4 @@ a:visited {
       transform: translateY(0); /* Vuelve a su posición original */
     }
   }
-
-
-
-  
 }
