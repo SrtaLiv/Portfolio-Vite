@@ -13,36 +13,9 @@ function Nav() {
     return (
         <header>
             <nav className='nav'>
-            <Link className='nav-link' to="inicio" smooth={true} duration={600}>
-                <h1 className="cssanimation sequence rotateXIn">Oli</h1>
-            </Link>
-                
-                <div className='nav-menu'>
-                    <ul className='nav-list'>
-                        
-                        <li className='nav-item'>
-                            <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
-                                    <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-house" />
-                                    Sobre mi
-                            </Link>
-                        </li>
-
-                        <li className='nav-item'>
-                            <Link className='nav-link' to='proyectos'smooth={true} duration={600}>
-                                    <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-diagram-project" />
-                                    Proyectos
-                            </Link>
-                        </li>
-
-                        <li className='nav-item'>
-                            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
-                                    <FontAwesomeIcon className='nav-icon' icon="fa-solid fa-heart" />
-                                    Contacto
-                            </Link>
-                        </li>
-
-                    </ul>
-                </div>
+                <Link className='nav-link' to="inicio" smooth={true} duration={600}>
+                    <h3 className='logo'>Olivia</h3>
+                </Link>
 
                 <div className='nav-item'>{darkMode ? (
                     <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
@@ -50,6 +23,34 @@ function Nav() {
                     <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
                 )}
                 </div>
+
+                <div className='nav-menu'>
+                    <ul className='nav-list'>
+                        <li className='burguer'>
+                            <FontAwesomeIcon icon="fa-solid fa-bars" />
+                        </li>
+                        <li className='nav-item'>
+                            <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
+                                Sobre mi
+                            </Link>
+                        </li>
+
+                        <li className='nav-item'>
+                            <Link className='nav-link' to='proyectos' smooth={true} duration={600}>
+                                Proyectos
+                            </Link>
+                        </li>
+
+                        <li className='nav-item'>
+                            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
+                                Contacto
+                            </Link>
+                        </li>
+
+                    </ul>
+                </div>
+
+          
 
             </nav>
         </header>

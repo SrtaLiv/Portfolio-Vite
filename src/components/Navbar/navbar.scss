@@ -2,44 +2,39 @@
 
 header{
   @include themify($themes) {
-  background-color: themed("bg");
+  background-color: opacify($color: #00000000, $amount: 0);
   z-index: 1000;
   position: absolute;
-  height: 6%;
   top: 0;
   left: 0;
   right: 0;
   position: fixed; //ver con q queda mejor..
   
     .nav{
-      height: var(--header-height);
-      color: themed("textColor");
-      background-color: themed("bg");
+      margin-top: 1rem;
+      border-radius: 20px;
+      height: 60px;
+      color: themed("text");
+      background-color: themed("bgNav");
       align-items: center;
       justify-content: space-between;
       display: flex;
-      width: 100%;
-    
-      .nav-logo{
-        color: themed("textColor");
-        font-weight: 600;
-      }
+      padding: 0 1rem;
       
+      .burguer{
+        cursor: pointer;
+        display: none;
+        @include mobile{
+          display: block;
+    
+        }
+      }
+
       .nav-menu{
         font-weight: 600;       
         
         @include mobile{
-          justify-content: center;
-          background-color: themed("bg");
-          border-top: 2px solid themed("textColor");
-          bottom: 0;
-          left: 0;
-          position: fixed;
-          height: 4rem;
-          display: grid;
-          align-content: center;
-          transition: .4s;
-          position: fixed;
+          display: none;
           width: 100%;
         }
         
@@ -49,14 +44,7 @@ header{
           align-content: center;
           gap: 20px;
 
-          .nav-item {
-
-            .nav-icon{
-              display: none;
-              @include mobile{
-                display: flex;
-              }
-            }
+          .nav-item {       
             .nav-link {
               position: relative;
               display: flex;
@@ -66,39 +54,50 @@ header{
               cursor: pointer;
               color: themed("textColor");
             }
-            .nav-link:hover{
-              color: themed("primary");
+   
+            a {
+              text-decoration: none;
+              color: black;
+              position: relative;
             }
             
+            a::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: -2px; /* Ajusta la distancia entre el texto y la línea */
+              width: 0;
+              height: 2px; /* Grosor de la línea */
+              background-color: themed("primary"); /* Color de la línea */
+              transition: width 0.4s ease, left 0.4s ease; /* Controla la duración y el efecto de la transición */
+              transform: translateX(-50%); /* Centra la línea */
+            }
+            
+            a:hover::after {
+              width: 80%;
+            }
         }
    
-      }
+        }
     }
   }
-  .cssanimation{
-    color: themed("primary");
+
+  .logo{
+    font-family: Playwrite CU;
+    color: themed("text");
+    font-size: large;
   }
   }
   
 }
 
 
-.cssanimation, .cssanimation span {
-  animation-duration: 2s;
-  animation-fill-mode: both;
+.nav-item:hover{
+  cursor: pointer;
 }
 
-.cssanimation span { display: inline-block }
 
-.rotateXIn { animation-name: rotateXIn }
-@keyframes rotateXIn {
-  0% {
-      transform: translate(-40px, 0px);
-      opacity: 0;
-  }
-  50% { transform: translate(40px, 0px) }
-}
 
-.rotateXIn:hover {
-  animation-name: rotateXIn;
-}
+
+
+

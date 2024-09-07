@@ -30,24 +30,21 @@ function Contact() {
 
             <form action="https://submit-form.com/Ncyecq4Ay">
                 <label htmlFor="name">
-                    <FontAwesomeIcon icon={faSignature} />
-                    NOMBRE
+                    
                 </label>
-                <input type="text" placeholder='Nombre*' required />
+                <input type="text" placeholder=' Nombre' required />
 
                 <label htmlFor="email">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    EMAIL
+                    
                 </label>
-                <input type="email" name='email' placeholder='Email' required />
+                <input type="email" name='email' placeholder=' Email' required />
 
                 <label htmlFor="message">
-                    <FontAwesomeIcon icon={faEnvelope} /> MENSAJE
                 </label>
                 <textarea
                     id="message"
                     name="message"
-                    placeholder="Deja tu mensaje"
+                    placeholder=" Deja tu mensaje"
                     required
                 ></textarea>
 

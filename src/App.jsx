@@ -8,8 +8,6 @@ import Footer from './components/Footer/Footer.jsx';
 import Contact from "./components/Contact/Contact.jsx";
 import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
 import { StyledEngineProvider } from '@mui/material/styles';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import GSAP from './GSAP.jsx';
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);

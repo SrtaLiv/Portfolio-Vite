@@ -4,6 +4,15 @@
   font-style: normal;
 }
 
+
+.playwrite-cu {
+  font-family: "Playwrite CU", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
 //  LIGHT AND DARK MODE
 $themes: (
   light: (
@@ -14,6 +23,7 @@ $themes: (
     textColorSoft: #555,
     border: rgb(34, 34, 34),
     primary: #F5C3B4,
+    bgNav: #EEEFF5
   ),
   dark: (
     textColor: whitesmoke,
@@ -23,6 +33,7 @@ $themes: (
     textColorSoft: lightgray,
     border: #444,
     primary: #C6FA19,
+    bgNav: #16252D
   )
 );
 
@@ -80,7 +91,6 @@ ul {
 }
 a {
   text-decoration: none;
-  cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 
@@ -88,6 +98,11 @@ a, button:hover {
     cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
 
 
 a:visited {
@@ -158,6 +173,10 @@ a:visited {
   }
   h4{
     font-size: 0.8rem;
+  }
+
+  a{
+    font-weight:500;
   }
 
   @keyframes reveal {
