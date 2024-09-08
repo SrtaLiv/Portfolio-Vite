@@ -5,12 +5,14 @@
         background-color: themed("bg");
         color: themed("textColor");
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
 
         .proyectos-container {
             z-index: 0;
             display: flex;
             flex-direction: column;
-            height: auto;
 
             .proyecto-card {
                 margin-top: 1rem;

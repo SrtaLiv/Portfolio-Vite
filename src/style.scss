@@ -11,6 +11,10 @@
   font-style: normal;
 }
 
+.main {
+  width: 100vw;
+}
+
 //  LIGHT AND DARK MODE
 $themes: (
   light: (
@@ -22,7 +26,7 @@ $themes: (
     border: rgb(34, 34, 34),
     primary: #f5c3b4,
     bgNav: #eeeff5,
-    btnHover: #FFA489
+    btnHover: #ffa489
   ),
   dark: (
     textColor: whitesmoke,
@@ -33,7 +37,7 @@ $themes: (
     border: #444,
     primary: #c6fa19,
     bgNav: #16252d,
-    btnHover:  #9CCB00
+    btnHover: #9ccb00
   )
 );
 
@@ -112,84 +116,78 @@ a:visited {
 //COLORES
 
 /*=============== VARIABLES CSS ===============*/
-:root {
+// header {
+//   padding: 0.6rem 2rem;
+// }
+
+.inicio,
+.sobre-mi,
+.proyectos,
+.container-contact,
+footer {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+  border-bottom: 1px solid white;
+}
+
+//tablet
+@media screen and (max-width: 768px) {
   .inicio,
   .sobre-mi,
   .proyectos,
   .container-contact,
   footer {
-    border-bottom: 1px solid gray;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    padding: 3rem;
   }
+}
 
+//celular
+@media screen and (max-width: 480px) {
+  .inicio,
+  .sobre-mi,
+  .proyectos,
+  .container-contact,
+  footer {
+    padding: 1rem;
+    width: 100%;
+  }
+}
 
-  header {
-    border: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+h1,
+h2,
+h3,
+h4 {
+  animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
+}
 
-  //tablet
-  @media screen and (max-width: 768px) {
-    .inicio,
-    .sobre-mi,
-    .proyectos,
-    .container-contact,
-    footer {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-  }
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.8rem;
+}
 
-  //celular
-  @media screen and (max-width: 480px) {
-    .inicio,
-    .sobre-mi,
-    .proyectos,
-    .container-contact,
-    footer {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      width: 100%;
-    }
-  }
+a {
+  font-weight: 500;
+}
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    animation: reveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s backwards;
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* O un movimiento hacia arriba/abajo */
   }
-
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  h4 {
-    font-size: 0.8rem;
-  }
-
-  a {
-    font-weight: 500;
-  }
-
-  @keyframes reveal {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); /* O un movimiento hacia arriba/abajo */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* Vuelve a su posición original */
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
   }
 }

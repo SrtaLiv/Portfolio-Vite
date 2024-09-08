@@ -9,8 +9,7 @@ function Inicio() {
         <div className='inicio'>
             <h1>Ana Olivia Todesco</h1>
             <h3>Full Stack Developer • Creadora de contenido</h3>
-            <section>
-
+            <div class="buttons">
                 <a href="src/assets/CURRICULUM.pdf" download="CURRICULUM.pdf" >
                     <button className='btn-cv'>
                         <FontAwesomeIcon icon={faArrowDown} />
@@ -18,10 +17,10 @@ function Inicio() {
                     </button>
                 </a>
 
-                <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
+                <Link className='nav-link' to='container-contact' smooth={true} duration={600}>
                     <button className='btn-contacto'>Contacto</button>
                 </Link>
-            </section>
+            </div>
         </div>
     )
 }

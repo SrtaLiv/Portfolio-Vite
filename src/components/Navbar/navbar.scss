@@ -1,6 +1,9 @@
 @import "../../style.scss";
 
 header {
+
+  padding: 0.6rem 2rem;
+
   @include themify($themes) {
     background-color: opacify($color: #00000000, $amount: 0);
     z-index: 1000;
@@ -8,6 +11,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
 
     nav {
       margin-top: 1rem;
@@ -19,6 +24,7 @@ header {
       justify-content: space-between;
       display: flex;
       padding: 0 1rem;
+      width: 100%;
     }
 
     .logo {
@@ -45,7 +51,6 @@ header {
         background-color: themed("bgNav");
         margin-top: 10rem;
         border-radius: 0 0 20px 20px;
-        width: 100%;
         gap: 1rem;
 
         .nav-menu.open {

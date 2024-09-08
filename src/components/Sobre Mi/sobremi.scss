@@ -6,28 +6,31 @@
         color: themed("textColor");
         min-height: 90vh;
 
-        .descripcion{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .descripcion {
             display: flex;
             flex-direction: row;
-            
+            gap: 1rem;
+
             @include mobile {
                 flex-direction: column;
             }
             @include tablet {
                 flex-direction: column;
             }
-    
         }
+
         img {
-            object-fit:cover;
+            object-fit: cover;
             max-height: 300px;
             border-radius: 20px;
         }
-        span{
+        span {
             font-weight: 600;
-            color: themed("textColor");
+            color: themed("primary");
         }
     }
-
 }
-

@@ -2,6 +2,9 @@
 
 footer {
     @include themify($themes) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         bottom: 0;
         background-color: themed("bgSoft");
         min-height: 30vh;
@@ -18,6 +21,7 @@ footer {
         .link-mail {
             color: themed("primary");
             text-decoration: underline;
+            text-wrap: wrap;
         }
 
     }

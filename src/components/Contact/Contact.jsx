@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faSignature, faCopy, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
-    const [open, setOpen] = useState(false);
-
     return (
         <div className='container-contact'>
             <div>

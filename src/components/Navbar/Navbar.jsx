@@ -35,7 +35,7 @@ function Nav() {
                     </li>
 
                     <li>
-                        <Link className='nav-link' to='contacto-container' smooth={true} duration={600} onClick={handleMenuToggle}>
+                        <Link className='nav-link' to='container-contact' smooth={true} duration={600} onClick={handleMenuToggle}>
                             Contacto
                         </Link>
                     </li>

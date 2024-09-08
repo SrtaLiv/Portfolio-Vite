@@ -12,27 +12,13 @@ function App() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`theme-${darkMode ? "dark" : "light"}`}>
+    <div className={`main theme-${darkMode ? "dark" : "light"}`}>
       <Nav />
-      <section id="inicio">
         <Inicio />
-      </section>
-
-      <section id="sobre-mi">
         <Sobremi />
-      </section>
-
-      <section id="proyectos">
         <Proyectos />
-      </section>
-
-      <section id="contacto-container">
         <Contact />
-      </section>
-
-      <section id="footer">
         <Footer />
-      </section>
     </div>
   );
 }
