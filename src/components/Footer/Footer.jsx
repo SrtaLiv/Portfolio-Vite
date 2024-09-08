@@ -10,7 +10,6 @@ function Footer() {
     }
     return (
         <footer>
-            <div className='footer'>
                 <p>Ponte en contacto para colaborar o di hola en</p>
                 <a class="link-mail" href="mailto:anaoliviatodesco@gmail.com">anaoliviatodesco@gmail.com</a>
                 
@@ -31,8 +30,6 @@ function Footer() {
                         <FontAwesomeIcon icon="fa-brands fa-github" size='2x' />
                     </a>
                 </div>
-            </div>
-
             {/* <a href='https://github.com/SrtaLiv/Portfolio-Vite'>Diseñado y Creado por Ana Olivia Todesco</a> */}
         </footer >
     )

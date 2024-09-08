@@ -19,12 +19,12 @@ function Contact() {
 
             <form action="https://submit-form.com/Ncyecq4Ay">
                 <label htmlFor="name">
-                    
+
                 </label>
                 <input type="text" placeholder=' Nombre' required />
 
                 <label htmlFor="email">
-                    
+
                 </label>
                 <input type="email" name='email' placeholder=' Email' required />
 
