@@ -1,4 +1,3 @@
-import { Typography, Card, CardContent, CardMedia, CardActions, Button } from '@mui/material';
 import './proyectos.scss';
 import proyectosData from './ProyectosData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,12 +9,20 @@ function Proyectos() {
             <div className="proyectos-container">
                 {proyectosData.map(proyecto => (
                     <div key={proyecto.id} className="proyecto-card">
-                        <h4>{proyecto.titulo}</h4>
-                        <p>{proyecto.descripcion}</p>
-                        <div className='github'>
-                            <a href={proyecto.enlace} target="_blank">
-                                <img src="/public/github.png" alt="" />
-                            </a>
+                        <h3 className='title'>
+                            {proyecto.titulo}
+                        </h3>
+                        <img src={proyecto.imagenUrl} alt="" />
+
+                        <a href={proyecto.enlace} target="_blank" className='title'>
+                            <FontAwesomeIcon icon="fa-brands fa-github" size='2x' />
+                            <p>{proyecto.descripcion}</p>
+                        </a>
+
+                        <div className='tecnologias'>
+                            {proyecto.tecnologias.map((tecnologia, index) => (
+                                <h4 key={index} className="badge">{tecnologia}</h4>
+                            ))}
                         </div>
                     </div>
                 ))}

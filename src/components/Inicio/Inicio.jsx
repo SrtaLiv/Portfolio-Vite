@@ -4,8 +4,6 @@ import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faSignature, faCopy, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-
-
 function Inicio() {
     return (
         <div className='inicio'>
@@ -15,7 +13,7 @@ function Inicio() {
 
                 <a href="src/assets/CURRICULUM.pdf" download="CURRICULUM.pdf" >
                     <button className='btn-cv'>
-                    <FontAwesomeIcon icon={faArrowDown} />
+                        <FontAwesomeIcon icon={faArrowDown} />
                         Curriculum
                     </button>
                 </a>

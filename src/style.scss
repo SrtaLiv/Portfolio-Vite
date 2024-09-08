@@ -21,7 +21,8 @@ $themes: (
     textColorSoft: #555,
     border: rgb(34, 34, 34),
     primary: #f5c3b4,
-    bgNav: #eeeff5
+    bgNav: #eeeff5,
+    btnHover: #FFA489
   ),
   dark: (
     textColor: whitesmoke,
@@ -31,7 +32,8 @@ $themes: (
     textColorSoft: lightgray,
     border: #444,
     primary: #c6fa19,
-    bgNav: #16252d
+    bgNav: #16252d,
+    btnHover:  #9CCB00
   )
 );
 

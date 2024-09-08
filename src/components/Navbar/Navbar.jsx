@@ -1,15 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { DarkModeContext } from "../../context/darkModeContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
+import { Link } from 'react-scroll';
 import "./navbar.scss";
+import { color } from 'framer-motion';
 
 function Nav() {
     const { toggle, darkMode } = useContext(DarkModeContext);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const [isOn, setIsOn] = useState(false);
-    const toggleSwitch = () => setIsOn(!isOn);
+    const handleMenuToggle = () => {
+        console.log('click');
+        setMenuOpen(!menuOpen);  // Alterna el estado del menú
+    };
+
     return (
         <header>
             <nav className='nav'>
@@ -17,46 +21,42 @@ function Nav() {
                     <h3 className='logo'>Olivia</h3>
                 </Link>
 
-
-
-                <div className='nav-menu'>
+                <div className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                     <ul className='nav-list'>
-                        <li className='burguer'>
+                        <li className='burguer' onClick={handleMenuToggle}>
                             <FontAwesomeIcon icon="fa-solid fa-bars" />
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to="sobre-mi" smooth={true} duration={600}>
+                            <Link className='nav-link' to="sobre-mi" smooth={true} duration={600} onClick={handleMenuToggle}>
                                 Sobre mi
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='proyectos' smooth={true} duration={600}>
+                            <Link className='nav-link' to='proyectos' smooth={true} duration={600} onClick={handleMenuToggle}>
                                 Proyectos
                             </Link>
                         </li>
 
                         <li className='nav-item'>
-                            <Link className='nav-link' to='contacto-container' smooth={true} duration={600}>
+                            <Link className='nav-link' to='contacto-container' smooth={true} duration={600} onClick={handleMenuToggle}>
                                 Contacto
                             </Link>
                         </li>
-                        <div className='nav-item'>{darkMode ? (
-                            <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
-                        ) : (
-                            <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
-                        )}
-                        </div>
+
+                        <li className='nav-item'>
+                            {darkMode ? (
+                                <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
+                            ) : (
+                                <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
+                            )}
+                        </li>
                     </ul>
                 </div>
-
-
-
             </nav>
         </header>
     );
 }
 
 export default Nav;
-

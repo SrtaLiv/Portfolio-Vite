@@ -29,6 +29,12 @@
             transition: ease-in 0.2s;
             border: solid themed("primary") 2px;
         }
+
+        button:hover {
+            // background-color: #FFA489;
+            background-color: themed("btnHover");
+            color: themed("bg");
+        }
         
         .btn-contacto {
             border: 2px solid themed("bg");
