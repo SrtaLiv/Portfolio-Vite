@@ -42,16 +42,15 @@ function Nav() {
                 </ul>
 
                 <div className="toggles">
-                    <div onClick={handleMenuToggle} className='burguer'>
-
-                        <FontAwesomeIcon icon="fa-solid fa-bars" />
-                    </div>
                     <div>
                         {darkMode ? (
                             <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-sun" />
                         ) : (
                             <FontAwesomeIcon onClick={toggle} icon="fa-solid fa-moon" />
                         )}
+                    </div>
+                    <div onClick={handleMenuToggle} className='burguer'>
+                        <FontAwesomeIcon icon="fa-solid fa-bars" />
                     </div>
                 </div>
 
