@@ -27,6 +27,10 @@ header {
       font-size: large;
     }
 
+    .nav-link{
+      color: themed("text");
+    }
+
     ul {
       display: flex;
       flex-direction: row;
