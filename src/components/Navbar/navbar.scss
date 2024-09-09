@@ -1,7 +1,6 @@
 @import "../../style.scss";
 
 header {
-
   padding: 0.6rem 2rem;
 
   @include themify($themes) {
@@ -45,30 +44,22 @@ header {
       align-items: center;
 
       @include mobile {
+        display: none;
+      }
+
+      .open {
         display: flex;
         flex-direction: column;
-        position: static;
-        background-color: themed("bgNav");
-        margin-top: 10rem;
-        border-radius: 0 0 20px 20px;
-        gap: 1rem;
+        position: relative;
+      }
 
-        .nav-menu.open {
-          display: flex;
-          margin-left: 15rem;
-          top: 60px;
-          flex-direction: column;
-          gap: 1rem;
-        }
+      li {
+        text-decoration: none;
+        list-style: none;
+        cursor: pointer;
 
-        li {
-          text-decoration: none;
-          list-style: none;
-          cursor: pointer;
-
-          @include mobile {
-            display: none;
-          }
+        @include mobile {
+          display: none;
         }
       }
     }
@@ -94,6 +85,25 @@ header {
     }
     .burger:hover {
       transform: rotate(90deg);
+    }
+
+    ul.nav-menu {
+      @include mobile {
+        display: none;
+        z-index: -1;
+        background-color: themed("bgNav");
+      }
+    }
+    ul.nav-menu.open {
+      @include mobile {
+        background-color: themed("bgNav");
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        margin-top: 14rem;
+        flex-direction: column;
+        align-items: start;
+      }
     }
   }
 }
