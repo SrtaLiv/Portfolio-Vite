@@ -138,9 +138,13 @@ footer {
   .sobre-mi,
   .proyectos,
   .container-contact,
-  footer {
+  footer,
+  header {
     width: 100%;
     padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
   }
 }
 
@@ -150,9 +154,9 @@ footer {
   .sobre-mi,
   .proyectos,
   .container-contact,
-  footer {
-    padding: 1rem;
-    width: 100%;
+  footer,
+  header {
+    padding: 2rem;
   }
 }
 

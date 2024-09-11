@@ -7,10 +7,10 @@
         height: 60vh;
         background-color: themed("bg");
         color: themed("textColor");
-
         display: flex;
         flex-direction: column;
         align-items: start;
+        justify-self: center;
         
         form {
             display: flex;
