@@ -20,7 +20,6 @@ function Nav() {
                     <h3 className='logo'>Olivia</h3>
                 </Link>
 
-
                 <ul className={navbarOpen ? 'nav-menu open' : 'nav-menu'}>
                     <li>
                         <Link className='nav-link' to="sobre-mi" smooth={true} duration={600} onClick={handleMenuToggle}>

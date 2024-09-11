@@ -129,7 +129,6 @@ footer {
   padding-right: 6rem;
   justify-content: center;
   align-items: center;
-  text-wrap: wrap;
 }
 
 //tablet
@@ -140,7 +139,6 @@ footer {
   .container-contact,
   footer,
   header {
-    width: 100%;
     padding: 3rem;
     justify-content: center;
     align-items: center;
@@ -154,9 +152,10 @@ footer {
   .sobre-mi,
   .proyectos,
   .container-contact,
-  footer,
-  header {
+  footer, 
+  header{
     padding: 2rem;
+    width: 100%;
   }
 }
 

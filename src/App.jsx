@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className={`main theme-${darkMode ? "dark" : "light"}`}>
-      <Nav />
+        <Nav />
         <Inicio />
         <Sobremi />
         <Proyectos />

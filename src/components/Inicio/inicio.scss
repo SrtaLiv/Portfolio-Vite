@@ -7,8 +7,6 @@
         min-height: 80vh;
         color: themed("text");
         background-color: themed("bgSoft");
-        
-        // align-items: start;
 
         @include mobile {
             width: 100%;
