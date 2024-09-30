@@ -5,19 +5,22 @@
         color: themed("text");
         background-color: themed("bgSoft");
         display: flex;
+        flex: row;
         margin: 0 auto;
-        overflow-x: hidden;
-        padding: 6rem;
-        border-radius: 20px;
-        width: 90%;
+        overflow: hidden;
+        text-align: center;
+        height: 200px;
+        width: 100% !important; 
         font-weight: 600;
         position: relative;
         align-items: center;
+        justify-content: center;
+        align-content: center;
     }
+
     span {
         animation: scroll linear infinite 30s;
         position: absolute;
-        left: 100%;
         font-size: 2rem;
         left: max(calc(200px * 10), 100%);
     }
