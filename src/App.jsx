@@ -7,6 +7,8 @@ import Proyectos from './components/Proyectos/Proyectos.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Contact from "./components/Contact/Contact.jsx";
 import Sobremi from "./components/Sobre Mi/Sobremi.jsx";
+import Tecnologias from "./components/Tecnologias/Tecnologias.jsx";
+
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -16,6 +18,7 @@ function App() {
         <Nav />
         <Inicio />
         <Sobremi />
+        <Tecnologias />
         <Proyectos />
         <Contact />
         <Footer />
