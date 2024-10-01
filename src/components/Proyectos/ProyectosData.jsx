@@ -12,7 +12,7 @@ const proyectosData = [
         titulo: 'Landing Page para Nutricionista',
         descripcion: 'Página web diseñada para una nutricionista. El objetivo principal de la página es brindar información sobre los servicios que ofrece la profesional, así como también facilitar el contacto con los pacientes.',
         tecnologias: ['React', 'SCSS'],
-        imagenUrl: 'https://sacfa.org.za/wp-content/uploads/333754160_1189495331931687_4124014204074738876_n.jpg',
+        imagenUrl: 'src/assets/nutri.png',
         enlace: 'https://github.com/SrtaLiv/Portfolio-v1.git'
     },
 ];
